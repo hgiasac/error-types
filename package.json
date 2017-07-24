@@ -1,0 +1,26 @@
+{
+  "name": "@tons/error-type",
+  "version": "0.1.0",
+  "description": "Nodejs error typescript interface",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tslint ./src/index.ts && rm -rf lib && tsc",
+    "setup": "npm install",
+    "test": "ts-node node_modules/tape/bin/tape test/**/*.ts",
+    "prepublishOnly": "rm -rf node_modules && npm install && npm run build"
+  },
+  "author": "toan.nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.7",
+    "@types/tape": "^4.2.30",
+    "tape": "^4.7.0",
+    "ts-node": "^3.2.0",
+    "tslint": "^5.4.3",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.3.4"
+  },
+  "dependencies": {}
+}
